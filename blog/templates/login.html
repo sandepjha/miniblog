@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block content %}
+<h3 class="text-white my-5">Welcome to login page</h1>
+  {% for form in fm %}
+  <form action="" method="POST" novalidate>
+    {% csrf_token %} 
+    <div class="form-group">
+    {{form.label_tag}} {{form}} {{form.errors|striptags}}
+    </div>
+    {% endfor %}
+    <input type="submit" name="" id="" value="submit" />
+  </form>
+</div>
+{% endblock content %}
